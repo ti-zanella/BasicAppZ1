@@ -16,7 +16,7 @@ public class Utils {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(key, value);
         editor.commit();
-    }
+}
 
     public static String carregarDadosComponente(String key, Context classe) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(classe);

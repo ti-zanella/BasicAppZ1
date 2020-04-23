@@ -9,15 +9,18 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     private EditText ed1;
+    private static final String KEY_SAUDACAO = "msgSaudacao";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       ed1 =  findViewById(R.id.editText1);
+         ed1 =  findViewById(R.id.editText1);
+         String msg = Utils.carregarDadosComponente(KEY_SAUDACAO,this);
+         ed1.setText(msg);
     }
 
     public void gravar(View view) {
-        Utils.salvarDadosComponente("fanta",ed1.getText().toString(),view.getContext());
+        Utils.salvarDadosComponente(KEY_SAUDACAO,ed1.getText().toString(),view.getContext());
     }
 }
