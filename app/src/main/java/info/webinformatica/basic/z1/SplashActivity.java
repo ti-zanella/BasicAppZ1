@@ -10,18 +10,18 @@ public class SplashActivity extends AppCompatActivity {
     private static final int TIME_SPLASH = 2000;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_splash);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent dashb = new Intent(SplashActivity.this, MainActivity.class);
-                startActivity(dashb);
-                finish();
-            }
-        },TIME_SPLASH);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent dashb = new Intent(SplashActivity.this, MainActivity.class);
+                    startActivity(dashb);
+                    finish();
+                }
+            },TIME_SPLASH);
     }
 }
